@@ -1,0 +1,499 @@
+/* Main App Layout */
+.app-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    /* CHANGED: Brightness increased from 0.5 to 0.65 to make the image more visible */
+    filter: blur(8px) brightness(0.65);
+}
+
+.gradient-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    /* CHANGED: Overlay is now much more transparent (alpha from 0.5 -> 0.3 and 0.1) */
+    background: linear-gradient(to bottom, rgba(20, 5, 5, 0.3), rgba(20, 5, 5, 0.1), rgba(20, 5, 5, 0.3));
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex-grow: 1;
+    /* CHANGED: Increased max-width for a wider layout on large screens */
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem 1rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+@media (min-width: 1024px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Header Component */
+.header {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(22, 10, 10, 0.4); /* Red-tinted glass */
+    backdrop-filter: blur(20px);
+}
+
+.header-container {
+    /* CHANGED: Matches the new wider content area */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-logo-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px hsla(var(--neon-red), 0.5);
+    
+}
+
+.logo-img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 0.3rem;
+}
+
+
+
+.header-logo-icon span {
+    color: var(--primary-foreground);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-shadow: 0 0 20px hsla(var(--neon-red), 0.6);
+}
+
+/* Robot Panel Component */
+.robot-panel-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.robot-image-wrapper {
+    position: relative;
+}
+
+.robot-glow-effect {
+    position: absolute;
+    inset: 0;
+    background-color: hsla(var(--primary), 0.2);
+    filter: blur(48px);
+    border-radius: 9999px;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.robot-image {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    /* CHANGED: Increased the max-width of the robot image to make it larger */
+    max-width: 32rem;
+    filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.5));
+}
+
+.robot-info {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.robot-title {
+    font-size: 1.875rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-shadow: 0 0 20px hsla(var(--neon-red), 0.6);
+    margin-bottom: 0.75rem;
+}
+
+.robot-description {
+    color: var(--muted-foreground);
+    max-width: 24rem;
+    margin-bottom: 1.5rem;
+}
+
+.robot-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.robot-status-indicator {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background-color: var(--primary);
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.robot-status-text {
+    font-size: 0.875rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+/* Chat Panel Component */
+.chat-panel-container {
+    /* CHANGED: Increased the height of the chat panel by reducing the subtracted value */
+    height: calc(100vh - 9rem);
+    display: flex;
+    flex-direction: column;
+    background: rgba(22, 10, 10, 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 210, 210, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.chat-header {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid hsla(var(--border), 0.5);
+}
+
+.chat-header-title {
+    font-size: 1.25rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-shadow: 0 0 20px hsla(var(--neon-red), 0.5);
+}
+
+.messages-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.messages-container > div {
+    margin-bottom: 0.75rem;
+}
+
+.input-area {
+    padding: 1rem;
+    border-top: 1px solid hsla(var(--border), 0.5);
+}
+
+.input-flex-wrapper {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chat-input {
+    flex-grow: 1;
+    background-color: hsla(var(--secondary), 0.5);
+    border: 1px solid hsla(var(--border), 0.3);
+    color: var(--foreground);
+    border-radius: 0.5rem;
+    height: 2.75rem;
+    padding: 0 0.75rem;
+    transition: all 0.3s;
+}
+
+.chat-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px hsla(var(--primary), 0.5);
+}
+
+.chat-input::placeholder {
+    color: var(--muted-foreground);
+}
+
+/* Chat Message Component */
+.message-wrapper {
+    display: flex;
+    width: 100%;
+    animation: message-slide-in 0.3s ease-out;
+}
+
+.message-wrapper.user {
+    justify-content: flex-end;
+}
+
+.message-wrapper.bot {
+    justify-content: flex-start;
+}
+
+.message-bubble {
+    max-width: 75%;
+    border-radius: 0.75rem;
+    padding: 0.6rem 1rem;
+    transition: all 0.3s;
+}
+
+.message-bubble.bot {
+    background: rgba(22, 10, 10, 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 210, 210, 0.1);
+    box-shadow: 0 0 20px hsla(var(--neon-red), 0.4);
+    color: var(--foreground);
+}
+
+.message-bubble.user {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message-text {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.message-timestamp {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* Generic Button */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    height: 2.75rem;
+    padding: 0 1.25rem;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.button:hover {
+    background-color: hsl(var(--primary) / 0.9);
+    box-shadow: 0 0 30px hsla(var(--neon-red), 0.6);
+    transform: translateY(-2px);
+}
+/* --- Study with SVEC Button --- */
+.study-button {
+    background-color: #e11d48; /* SVEC red */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(225, 29, 72, 0.4);
+}
+
+.study-button:hover {
+    background-color: #be123c;
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(225, 29, 72, 0.7);
+}
+
+/* --- Study Page --- */
+.study-page {
+    min-height: 100vh;
+    background: linear-gradient(to right, #1e293b, #0f172a);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.study-page h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #f87171;
+}
+
+.study-page p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    line-height: 1.6;
+    color: #e2e8f0;
+}
+
+
+/* Animations */
+@keyframes message-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px hsla(var(--neon-red), 0.4);
+    }
+    50% {
+        box-shadow: 0 0 40px hsla(var(--neon-red), 0.6);
+    }
+}
+/* Markdown Link Styling */
+.message-text a {
+  color: #4ea1ff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.message-text a:hover {
+  color: #82c0ff;
+}
+
+/* Optional bold & list styles */
+.message-text strong {
+  font-weight: 700;
+}
+
+.message-text ul {
+  margin-left: 1rem;
+  list-style-type: disc;
+}
+.chat-link {
+  color: #007bff;
+  text-decoration: underline;
+}
+.chat-bold {
+  font-weight: 600;
+}
+/* Header Study Button */
+.header-container .study-button ,.action-btn{
+    margin-left: auto; /* Push to right corner */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    padding: 0 1rem;
+    background-color: #e11d48; /* SVEC red */
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(225, 29, 72, 0.4);
+}
+
+.header-container .study-button:hover {
+    background-color: #be123c;
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(225, 29, 72, 0.7);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Pushes logo/title left, actions right */
+    align-items: center;
+    width: 100%; /* Ensure it spans the full width of the header */
+}
+
+
+.header-actions {
+    display: flex;
+    gap: 10px; 
+    align-items: center;
+}
+
+.action-btn:hover {
+    background-color: #be123c;
+    transform: translateY(-1px);
+    box-shadow: 0 0 25px rgba(225, 29, 72, 0.7);
+}
+
+/* --- Markdown-like formatting inside chat bubbles --- */
+.message-text {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.message-text a {
+  color: #4ea1ff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.message-text a:hover {
+  color: #82c0ff;
+}
+
+.message-text strong {
+  font-weight: 700;
+  color: #ffd7d7;
+}
+
+.message-text ul {
+  margin: 0.5rem 0 0.5rem 1.25rem;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.message-text li {
+  margin-bottom: 0.25rem;
+}
+/* Ensure the existing button uses the new action-btn style */
+/* .study-button {
+    /* You can remove any specific padding/color rules from .study-button 
+       if they conflict with .action-btn, and let .action-btn take over. */

@@ -1,0 +1,28 @@
+/* Global Styles & Design System */
+:root {
+    /* Colors - Red Theme */
+    --background: hsl(0, 15%, 8%); /* Dark background with a hint of red */
+    --foreground: hsl(0, 10%, 95%);
+    --primary: hsl(0, 90%, 55%); /* Vibrant Red */
+    --primary-foreground: hsl(0, 0%, 100%);
+    --secondary: hsl(0, 10%, 15%);
+    --muted-foreground: hsl(0, 5%, 65%);
+    --border: hsl(0, 10%, 25%);
+    --neon-red: hsl(0, 100%, 50%); /* Bright Neon Red for glows */
+
+    /* Fonts */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Base Styles */ 
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+* {
+    box-sizing: border-box;
+}

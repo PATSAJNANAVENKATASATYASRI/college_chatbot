@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Faculty List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .faculty-list {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .faculty-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .faculty-item:last-child {
+            border-bottom: none;
+        }
+
+        .faculty-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .faculty-name {
+            font-weight: bold;
+            color: #222;
+        }
+
+        .faculty-designation {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .profile-link a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s;
+        }
+
+        .profile-link a:hover {
+            color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .faculty-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile-link {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSE Department Faculty</h1>
+    <div class="faculty-list">
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Dr. D. Jaya Kumari</div>
+                <div class="faculty-designation">Head & Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/cse_hod1.jpeg" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Dr. Venkateswara Rao</div>
+                <div class="faculty-designation">Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Dr._Venkateswara_Rao_Web_Profile.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Dr. V. S Naresh</div>
+                <div class="faculty-designation">Professor & Dean(R&D)</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Dr.V.S.Naresh.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Dr. K. Shirin Bhanu</div>
+                <div class="faculty-designation">Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Dr.Shirin%20Bhanu%20Koduri.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Dr. A. Daveedu Raju</div>
+                <div class="faculty-designation">Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Dr.%20A.%20Daveedu%20Raju.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Dr. K. Venkata Ramana</div>
+                <div class="faculty-designation">Associate Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Dr.%20K%20Venkata%20Ramana.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Dr. G Venkatesh</div>
+                <div class="faculty-designation">Associate Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/7.%20Dr.%20G%20Venkatesh.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. G. Nataraj</div>
+                <div class="faculty-designation">Sr. Asst. Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Nataraj%20G.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. B. Sri Ramya</div>
+                <div class="faculty-designation">Sr.Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_B.Sriramya-%20Web%20profile.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. G. Sriram Ganesh</div>
+                <div class="faculty-designation">Sr.Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_GSRIRAMGANESH.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. N. V. Murali Krishna Raja</div>
+                <div class="faculty-designation">Sr.Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_%20N%20V%20MURALIKRISHNA%20RAJA.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. N. Hiranmayee</div>
+                <div class="faculty-designation">Sr.Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Hiranmayee.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. M. Nageswara Rao</div>
+                <div class="faculty-designation">Sr.Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_MNRAO.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. Y. Divya Vani</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Y%20Divya%20Vani.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. K. Lakshminarayana</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_K.%20Lakshmi%20Narayana.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Ms. A.Kiranmai</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_A.kiranmai-%20Web%20profile.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Ms. G. Siri Venkata Bhanu</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_G.s.v.%20Bhanu%20-%20Web%20profile.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. D. S. L Manikanteswari</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_D%20S%20L%20Manikanteswrai.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. M. S. Kumar Reddy </div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.%20M.%20S.%20Kumar%20Reddy.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. P. Rajesh</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_P.%20Rajesh.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Ms. M. Santhi</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_MSANTHI_WEB_PROFILE.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. A. Nagajyothi</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_A.Nagajyothi-%20Web%20profile.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. K. Praveen Kumar</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Praveen_Webprofile.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. M. N. V Surekha</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_surekha_profile_WEB.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. P. Ramamohan Rao</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_P.RamamohanRao.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. M. V. V. G. Krishna Murthy</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.MVVGKrishnaMurthy.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. V. Gajendra Kumar</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.%20V.%20Gajendra%20Kumar.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. J. Kanimozhi</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mrs.%20J.%20Kanimozhi.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. U. Jagadeesan</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.%20U.%20Jagadeesan.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. V. Nandini</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mrs.%20V.%20Nandini.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. Krishna</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.%20Krishna.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. J.Dhandapani</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.%20J.Dhandapani.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. T. Anu</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mrs.%20T.%20Anu.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. T. Anil Kumar Reddy</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.%20T.Anil%20Kumar%20Reddy.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. Shaik Apsaruneesa</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mrs.%20Shaik%20Apsaruneesa.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. K. Sri Durga Achuta</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mrs.%20K.%20Sri%20Durga%20Achuta.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. K. Sri Durga Achuta</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mrs.%20K.%20Sri%20Durga%20Achuta.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Ms.Ch N.S.Sireesha Lakshmi</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CST_Ms.N.S.Sireesha%20Lakshmi.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. V. VenkataLakshmi</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CST_Ms.%20V.%20VenkataLakshmi.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. Ch. N. P Latha</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CST_Mrs.%20Ch.%20N.%20P.%20Latha.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. K. Sarabandi</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/Mr.%20Kancharla%20Sarabandi.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. G. Deepak Pavan Kumar</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.G.%20Deepak%20Pavan%20Kumar.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. Y. Sunitha</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mrs.%20Y.%20Sunitha.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. SD. Arief</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.%20Sayed%20Arief.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. M. Sai Durga Lakshmi</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mrs.%20M.%20Sai%20Durga%20Lakshmi.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Ms. T. Pranusha</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_MS.T.Pranusha.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. K. Sai Ektha Kumar Naidu</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CST_Mr.%20K.%20Sai%20Ektha%20Kumar%20Naidu.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Dr. P. Naga Bhushanam</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.%20P.%20Naga%20Bhushanam.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. Y. Revathi</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mrs.%20Y.%20Revathi.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. S. Upendra Kumar</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.%20S.%20Upendra%20Kumar.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Dr. G Srividya</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/51.%20Dr.%20G.%20Srividya.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. G. Gunasekhar</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/52.%20Mr.%20S.Gunasekhar.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. B. Pavithra</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/53.%20Ms.%20B.Pavithra.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Ms. D. Jayasri</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/Ms.%20D.%20Jaya%20Sri.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. Subhabrata Sinha</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/Subhabrata%20Sinha%20Faculty%20Web%20Profile.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. P. Gopinath</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.P.Gopinath.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. K. Phanindra Brahmaji</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.%20K.%20Phanindra%20Brahmaji.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mr. S. P. Ramesh Varma</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mr.%20S.%20P.%20Ramesh%20Varma.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. Y. Uma Parvathi</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mrs.%20Y.%20Uma%20Parvathi.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. A. Neelima</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mrs.%20A.%20Neelima.pdf" target="_blank">View Profile</a></div>
+        </div>
+        <div class="faculty-item">
+            <div class="faculty-info">
+                <div class="faculty-name">Mrs. P. Sasi Rekha</div>
+                <div class="faculty-designation">Assistant Professor</div>
+            </div>
+            <div class="profile-link"><a href="https://srivasaviengg.ac.in/uploads/cse/faculty/CSE_Mrs.%20P%20Sasi%20Rekha.pdf" target="_blank">View Profile</a></div>
+        </div>
+        
+        
+
+        <!-- Add more faculty here -->
+    </div>
+</body>
+</html>
+
+        

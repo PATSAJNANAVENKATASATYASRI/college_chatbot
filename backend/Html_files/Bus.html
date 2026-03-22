@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SVEC — Transportation Facilities</title>
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --accent:#0b64c8;
+      --muted:#556;
+      --radius:10px;
+      --pad:22px;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    body{
+      margin:0;
+      background:linear-gradient(180deg, var(--bg), #eef3fb 60%);
+      color:var(--muted);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px;
+    }
+    .container{
+      max-width:900px;
+      margin:28px auto;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(20,40,80,0.06);
+      padding:var(--pad);
+      border:1px solid rgba(10,40,90,0.03);
+    }
+    h1{
+      margin:0 0 10px 0;
+      color:var(--accent);
+      font-size:1.6rem;
+      letter-spacing:0.2px;
+    }
+    p{ line-height:1.55; margin:14px 0; font-size:1rem; color:#334155; }
+    ul{ margin:10px 0 18px 20px; color:#334155; }
+    li{ margin:8px 0; }
+    .note{ font-size:0.95rem; color:#475569; background:#f1f8ff; padding:10px 12px; border-radius:8px; border:1px solid rgba(11,100,200,0.06); }
+    .actions{ margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .btn{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 6px 16px rgba(11,100,200,0.16);
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover{ transform:translateY(-3px); box-shadow:0 10px 30px rgba(11,100,200,0.2); }
+    .muted-link{ color:var(--accent); text-decoration:none; font-weight:600; }
+    footer{ margin-top:20px; font-size:0.9rem; color:#546a7b; }
+    @media (max-width:520px){
+      .container{ padding:16px; margin:14px; }
+      h1{ font-size:1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="title">
+    <h1 id="title">SVEC Transportation Facilities</h1>
+
+    <p>
+      Sri Vasavi Engineering College (SVEC) provides dedicated transport facilities to support commuting needs of both students and faculty.
+      The college operates a large fleet and follows routes across the district to make daily travel safe and convenient.
+    </p>
+
+    <div class="note" role="note">
+      <strong>Fleet size:</strong> A fleet of <strong>70 buses</strong> is available for faculty and students to commute between campus and their residences.
+    </div>
+
+    <ul>
+      <li>College buses run on multiple routes to cover students and staff coming from different parts of West Godavari district.</li>
+      <li><strong>Free transportation</strong> is provided for faculty commuting from <strong>Tadepalligudem</strong>.</li>
+      <li>Faculty travelling from places <strong>other than Tadepalligudem</strong> are eligible for a <strong>50% concession</strong> in the bus fee.</li>
+      <li>Transport is also provided for students to attend pool campus drives organized at other colleges.</li>
+    </ul>
+
+    <p>
+      For an interactive view of the routes, timings and stops, please check the official route map:
+    </p>
+
+    <div class="actions" aria-hidden="false">
+      <a class="btn" href="https://srivasaviengg.ac.in/routemap.php" target="_blank" rel="noopener noreferrer">
+        View Route Map
+      </a>
+
+      <a class="muted-link" href="mailto:transport@srivasaviengg.ac.in">
+        Contact Transport Office
+      </a>
+    </div>
+
+    <footer>
+      <p><strong>Note:</strong> Actual bus timings, stops and fee concessions are subject to College Transport Office approvals and may change from time to time. For up-to-date details call the college office or check the route map link above.</p>
+      <p>Contact Phone (General): +91-8818-284355 | Fax: +91-8818-284322</p>
+    </footer>
+  </main>
+</body>
+</html>

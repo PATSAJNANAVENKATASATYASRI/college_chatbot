@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Vasavi Engineering College Placement Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* Coordinator List Styles (Adapted from user's faculty list) */
+        .faculty-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .faculty-item:last-child {
+            border-bottom: none;
+        }
+
+        .faculty-info {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 70%;
+        }
+
+        .faculty-name {
+            font-weight: bold;
+            color: #222;
+        }
+
+        .faculty-designation {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 2px;
+        }
+        
+        .branch-info {
+            text-align: right;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        /* Table Styles for Placement Statistics */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .head-info {
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            background-color: #e6f0ff;
+        }
+        
+        .head-info .name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #222;
+        }
+        
+        .head-info .details {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        /* Media Query for responsiveness */
+        @media (max-width: 700px) {
+            .faculty-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .branch-info {
+                margin-top: 5px;
+                text-align: left;
+            }
+            
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr { border: 1px solid #ccc; margin-bottom: 10px; }
+
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>SRI VASAVI ENGINEERING COLLEGE PLACEMENTS</h1>
+
+    <div class="content-section">
+        <h2>Head - Placements</h2>
+        <div class="head-info">
+            <div class="name">Dr. P N V GOPALA KRISHNA</div>
+            <div class="details">Associate Professor (Mechanical) & Head - Placements</div>
+            <div class="details">Mobile: 9849511367 | Office: 08818-284355 (Ext:319)</div>
+            <div class="details">Email: <a href="mailto:svectpo@srivasaviengg.ac.in">svectpo@srivasaviengg.ac.in</a></div>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h2>Department Placement Coordinators</h2>
+        <div class="coordinator-list">
+            <div class="faculty-item" style="font-weight: bold; background-color: #f0f0f0; border-radius: 5px 5px 0 0; padding-top: 15px; padding-bottom: 15px;">
+                <div class="faculty-info" style="font-size: 1.1em;">
+                    <div class="faculty-name">Name</div>
+                    <div class="faculty-designation" style="color: #333;">Designation & Email</div>
+                </div>
+                <div class="branch-info" style="color: #333;">Branch</div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Mr. T. Dileep</div>
+                    <div class="faculty-designation">Asst. Professor & Placement Officer | <a href="mailto:placements@srivasaviengg.ac.in">placements@srivasaviengg.ac.in</a></div>
+                </div>
+                <div class="branch-info">MBA</div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Mr. Sd. Arief</div>
+                    <div class="faculty-designation">Asst. Professor & CSE Dept. Placement Co-ordinator | <a href="mailto:cseplacements@srivasaviengg.ac.in">cseplacements@srivasaviengg.ac.in</a></div>
+                </div>
+                <div class="branch-info">CSE</div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Mr. M. Vinod Kumar</div>
+                    <div class="faculty-designation">Asst. Professor & ECE Dept. Placement Co-ordinator | <a href="mailto:eceplacements@srivasaviengg.ac.in">eceplacements@srivasaviengg.ac.in</a></div>
+                </div>
+                <div class="branch-info">ECE</div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Mr. V. S. Aditya</div>
+                    <div class="faculty-designation">Asst. Professor & EEE Dept. Placement Co-ordinator | <a href="mailto:eeeplacements@srivasaviengg.ac.in">eeeplacements@srivasaviengg.ac.in</a></div>
+                </div>
+                <div class="branch-info">EEE</div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Mr. Sk. Arief</div>
+                    <div class="faculty-designation">Asst. Professor & ME Dept. Placement Co-ordinator | <a href="mailto:mechplacements@srivasaviengg.ac.in">mechplacements@srivasaviengg.ac.in</a></div>
+                </div>
+                <div class="branch-info">ME</div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Mr. M. Premkumar Raju</div>
+                    <div class="faculty-designation">Asst. Professor & CE Dept. Placement Co-ordinator | <a href="mailto:civilplacements@srivasaviengg.ac.in">civilplacements@srivasaviengg.ac.in</a></div>
+                </div>
+                <div class="branch-info">CE</div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Mr. Sk. Moulali</div>
+                    <div class="faculty-designation">Asst. Professor & AIML Dept. Placement Co-ordinator | <a href="mailto:aimlplacements@srivasaviengg.ac.in">aimlplacements@srivasaviengg.ac.in</a></div>
+                </div>
+                <div class="branch-info">AIML</div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Mr. P. Bharath</div>
+                    <div class="faculty-designation">Asst. Professor & MBA Dept. Placement Co-ordinator | <a href="mailto:mbaplacements@srivasaviengg.ac.in">mbaplacements@srivasaviengg.ac.in</a></div>
+                </div>
+                <div class="branch-info">MBA</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>Placement Statistics (Total Placements by Year)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>2024-25</th>
+                    <th>2023-24</th>
+                    <th>2022-23</th>
+                    <th>2021-22</th>
+                    <th>2020-21</th>
+                    <th>2019-20</th>
+                    <th>2018-19</th>
+                    <th>2017-18</th>
+                    <th>2016-17</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Category">UG Placements</td>
+                    <td data-label="2024-25">627</td>
+                    <td data-label="2023-24">433</td>
+                    <td data-label="2022-23">671</td>
+                    <td data-label="2021-22">1308</td>
+                    <td data-label="2020-21">631</td>
+                    <td data-label="2019-20">434</td>
+                    <td data-label="2018-19">383</td>
+                    <td data-label="2017-18">248</td>
+                    <td data-label="2016-17">275</td>
+                </tr>
+                <tr>
+                    <td data-label="Category">PG Placements</td>
+                    <td data-label="2024-25">51</td>
+                    <td data-label="2023-24">47</td>
+                    <td data-label="2022-23">104</td>
+                    <td data-label="2021-22">77</td>
+                    <td data-label="2020-21">14</td>
+                    <td data-label="2019-20">18</td>
+                    <td data-label="2018-19">41</td>
+                    <td data-label="2017-18">4</td>
+                    <td data-label="2016-17">31</td>
+                </tr>
+                <tr>
+                    <td data-label="Category" style="font-weight: bold;">Total Placements</td>
+                    <td data-label="2024-25" style="font-weight: bold;">678</td>
+                    <td data-label="2023-24" style="font-weight: bold;">480</td>
+                    <td data-label="2022-23" style="font-weight: bold;">775</td>
+                    <td data-label="2021-22" style="font-weight: bold;">1385</td>
+                    <td data-label="2020-21" style="font-weight: bold;">645</td>
+                    <td data-label="2019-20" style="font-weight: bold;">452</td>
+                    <td data-label="2018-19" style="font-weight: bold;">424</td>
+                    <td data-label="2017-18" style="font-weight: bold;">252</td>
+                    <td data-label="2016-17" style="font-weight: bold;">306</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="content-section">
+        <h2>Downloadable Placement Reports</h2>
+        <div class="coordinator-list">
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Placement Details of 2024-25</div>
+                </div>
+                <div class="branch-info"><a href="https://srivasaviengg.ac.in/api/placement/download/pdf/1769338092607_2025_BATCH_PLACEMENTS_DATA.pdf" target="_blank">View Profile</a></div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Placement Details of 2023-24</div>
+                </div>
+                <div class="branch-info"><a href="https://srivasaviengg.ac.in/api/placement/download/pdf/1769338264040_2024_BATCH_PLACEMENTS_DATA.pdf" target="_blank">View Profile</a></div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Placement Details of 2022-23</div>
+                </div>
+                <div class="branch-info"><a href="https://srivasaviengg.ac.in/api/placement/download/pdf/1769339544550_place_2022-23_compressed.pdf" target="_blank">View Profile</a></div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Placement Details of 2021-22</div>
+                </div>
+                <div class="branch-info"><a href="https://srivasaviengg.ac.in/api/placement/download/pdf/1769339516118_place_2021-22_compressed.pdf" target="_blank">View Profile</a></div>
+            </div>
+             <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Placement Details of 2020-21</div>
+                </div>
+                <div class="branch-info"><a href="https://srivasaviengg.ac.in/api/placement/download/pdf/1769339473404_place_2020-21_compressed.pdf" target="_blank">View Profile</a></div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Placement Details of 2019-20</div>
+                </div>
+                <div class="branch-info"><a href="https://srivasaviengg.ac.in/api/placement/download/pdf/1769338427167_place_2019-20_compressed.pdf" target="_blank">View Profile</a></div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Placement Details of 2018-19</div>
+                </div>
+                <div class="branch-info"><a href="https://srivasaviengg.ac.in/api/placement/download/pdf/1769338189974_place_2018-19.pdf" target="_blank">View Profile</a></div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Placement Details of 2017-18</div>
+                </div>
+                <div class="branch-info"><a href="https://srivasaviengg.ac.in/api/placement/download/pdf/1769338177624_place_2017-18.pdf" target="_blank">View Profile</a></div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Placement Details of 2016-17</div>
+                </div>
+                <div class="branch-info"><a href="https://srivasaviengg.ac.in/api/placement/download/pdf/1769338143364_place_2016-17.pdf" target="_blank">View Profile</a></div>
+            </div>
+            <div class="faculty-item">
+                <div class="faculty-info">
+                    <div class="faculty-name">Placement Details of 2015-16</div>
+                </div>
+                <div class="branch-info"><a href="https://srivasaviengg.ac.in/api/placement/download/pdf/1769338130238_place_2015-16.pdf" target="_blank">View Profile</a></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

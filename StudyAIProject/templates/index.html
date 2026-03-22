@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study with AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="overlay"></div>
+
+    <div class="content-grid">
+      <!-- Left Panel -->
+      <div class="left-panel">
+        <h1>Study with SVEC</h1>
+        <p class="subtitle">Upload your PDF and get instant help from CampusBot</p>
+
+        <!-- PDF Upload Card -->
+        <div class="card">
+          <h2>Step 1: Upload PDF</h2>
+
+          <!-- Hidden File Input -->
+          <input type="file" id="pdfInput" accept=".pdf" hidden>
+
+          <!-- Select PDF Button -->
+          <button class="select-btn" onclick="document.getElementById('pdfInput').click()">Select PDF</button>
+
+          <!-- Upload Button -->
+          <button class="upload-btn" onclick="uploadPDF()">Upload PDF</button>
+
+          <!--<p id="fileName" style="margin-top: 8px; color: #ff4c4c;"></p> -->
+          <p id="uploadStatus" style="color: #ff4c4c;"></p>
+
+        </div>
+
+        <!-- Ask Question Section -->
+        <div class="card" id="querySection" style="display: none;">
+  <h2>Step 2: How can I help you?</h2>
+  <div class="speech-container">
+    <!-- Textarea for user query -->
+    <textarea id="query" placeholder="Ask a question..."></textarea>
+
+    <!-- Microphone button with icon -->
+    <button class="mic-btn" id="micBtn" title="Speak">
+      <i class="bi bi-mic-fill"></i>
+    </button>
+  </div>
+
+  <div class="button-group">
+    <button onclick="askAI('explain')">Ask a Question</button>
+    <button onclick="askAI('quiz')">Generate MCQs</button>
+  </div>
+</div>
+
+      </div>
+
+      <!-- Right Panel -->
+      <div class="right-panel" id="responseSection" style="display: none;">
+        <h1>AI Response</h1>
+        <div class="response-area">
+          <pre id="response"></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Show selected file name
+    const pdfInput = document.getElementById("pdfInput");
+    const fileName = document.getElementById("fileName");
+
+    pdfInput.addEventListener("change", () => {
+      if (pdfInput.files.length > 0) {
+        fileName.textContent = "📄 " + pdfInput.files[0].name;
+      } else {
+        fileName.textContent = "";
+      }
+    });
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
